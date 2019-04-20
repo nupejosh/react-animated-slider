@@ -305,18 +305,7 @@ class Slider extends React.PureComponent {
 					onMouseOut: this.handleMouseOut,
 				}}
 			>
-				<a
-					onClick={this.previous}
-					className={`${classNames.previousButton}${isDisabled || !this.canGoPrevious() ? ` ${classNames.buttonDisabled}` : ''}`}
-				>
-					{previousButton}
-				</a>
-				<a
-					onClick={this.next}
-					className={`${classNames.nextButton}${isDisabled || !this.canGoNext() ? ` ${classNames.buttonDisabled}` : ''}`}
-				>
-					{nextButton}
-				</a>
+				
 				<div className={classNames.track}>
 					{React.Children.map(children, (item, index) => (
 						React.cloneElement(item, {
